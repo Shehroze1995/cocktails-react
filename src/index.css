@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url('https://i.pinimg.com/originals/de/44/d5/de44d5172d2b0e3cfeec35a15f9359d8.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.gridCols {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+nav {
+  transition: 0.4s;
+}
+
+.padd {
+  padding-block: 20px;
+  padding-inline: 10px;
+}
