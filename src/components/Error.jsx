@@ -7,7 +7,7 @@ const Error = () => {
         <p className="text-5xl font-bold text-red-600">Oops!</p>
         <p className="font-bold">404 - PAGE NOT FOUND</p>
         <p className="opacity-60">The page you looking for might have been removed had its name changed or is temporarily unavailable.</p>
-        <Link to='/' className="bg-blue-600 py-2 px-5 rounded-lg w-max m-auto font-bold hover:bg-blue-700">GO TO HOMEPAGE</Link>
+        <Link to='/cocktails-react/' className="bg-blue-600 py-2 px-5 rounded-lg w-max m-auto font-bold hover:bg-blue-700">GO TO HOMEPAGE</Link>
       </section>
     </div>
   )

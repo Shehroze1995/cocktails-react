@@ -55,7 +55,7 @@ const Navbar = () => {
               onMouseOver={() => setHoverHome(true)}
               onMouseLeave={() => setHoverHome(false)}
               className={`flex items-center gap-1 transition duration-300 navLink`}
-              to="/"
+              to="/cocktails-react/"
             >
               Home
             </NavLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
               onMouseOver={() => setHoverAbout(true)}
               onMouseLeave={() => setHoverAbout(false)}
               className={`transition duration-300 navLink`}
-              to={`/about`}
+              to={`/cocktails-react/about`}
             >
               About
             </NavLink>
@@ -89,7 +89,7 @@ const Navbar = () => {
               onMouseOver={() => setHoverNewsletter(true)}
               onMouseLeave={() => setHoverNewsletter(false)}
               className={`transition duration-300 navLink`}
-              to={`/newsletter`}
+              to={`/cocktails-react/newsletter`}
             >
               Newsletter
             </NavLink>

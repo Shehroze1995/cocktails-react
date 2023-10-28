@@ -16,7 +16,7 @@ const Detail = () => {
       <article className="pt-36 pb-8 w-[90%] m-auto max-w-6xl text-white">
         <div className="w-max m-auto mb-8">
           <Link
-            to={`/`}
+            to={`/cocktails-react/`}
             className="px-4 py-2 text-xl rounded font-bold border border-blue-500 hover:text-blue-800"
           >
             Go Back
