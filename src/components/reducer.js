@@ -3,7 +3,7 @@ const reducer = (state, action) => {
     return { ...state, loading: true, noResult: false };
   if (action.type == "NO_RESULT")
     return { ...state, noResult: true, loading: false };
-  if (action.type == "DISPLAY_DATA") {
+  if (action.type == "DISPLAY_DATA")
     return {
       ...state,
       cocktails: action.parameters,
@@ -12,7 +12,7 @@ const reducer = (state, action) => {
       loading: false,
       page: 1,
     };
-  }
+
   if (action.type == "SHOW_DETAILS") {
     const singleCocktail = state.cocktails.find(
       (item) => item.id == action.parameters
@@ -20,10 +20,7 @@ const reducer = (state, action) => {
     return { ...state, selectedCocktail: singleCocktail };
   }
   if (action.type == "HANDLED_SEARCH") {
-    const inputFormatted = action.parameters
-      .replace(/[^a-zA-Z0-9]/gi, "")
-      .toLowerCase();
-    // console.log(inputFormatted);
+    const inputFormatted = action.parameters.trim();
     return {
       ...state,
       searchItem: inputFormatted,

@@ -61,15 +61,13 @@ export const AppProvider = ({ children }) => {
     fetchData();
   }, [fetchData]);
 
-  const showDetails = (id) => {
+  const showDetails = (id) =>
     dispatch({ type: "SHOW_DETAILS", parameters: id });
-  };
 
   const handledSearch = (e, ref) => {
     e.preventDefault();
     if (!ref.trim()) return;
     dispatch({ type: "HANDLED_SEARCH", parameters: ref });
-    // fetchData();
   };
 
   const fetchCategories = async () => {
@@ -92,12 +90,8 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-  const openSubmenu = () => {
-    dispatch({ type: "OPEN_SUBMENU" });
-  };
-  const closeSubmenu = () => {
-    dispatch({ type: "CLOSE_SUBMENU" });
-  };
+  const openSubmenu = () => dispatch({ type: "OPEN_SUBMENU" });
+  const closeSubmenu = () => dispatch({ type: "CLOSE_SUBMENU" });
 
   const handledPage = (selectedPage) => {
     dispatch({ type: "HANDLED_PAGE", parameters: selectedPage });
