@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useRef, useState } from "react";
 import logo from "../assets/cocktail.png";
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs";
@@ -38,9 +38,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-6xl m-auto">
         <div className="flex items-center">
           <img className="w-8" src={logo} alt="logo" />
-          <p id="LOGO" className="text-3xl font-bold text-blue-500 capitalize">
+          <Link to={'/cocktails-react/'} id="LOGO" className="text-3xl font-bold text-blue-500 capitalize">
             Appetizer
-          </p>
+          </Link>
         </div>
         <div className="flex items-center gap-3 text-xl">
           <BsFacebook id="facebook" className="text-blue-500 cursor-pointer" />
