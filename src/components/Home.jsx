@@ -44,6 +44,7 @@ const Home = () => {
         >
           <div className="flex items-center border-2 border-gray-500 h-[3.5rem] rounded-lg rounded-tr-none rounded-br-none border-r-0 font-bold text-white cursor-pointer relative max-[350px]:w-[28%] categories">
             <button
+              type="button"
               onClick={openSubmenu}
               className="flex items-center gap-1 h-full w-full px-2 max-[350px]:px-0 max-[350px]:gap-0 max-[350px]:text-[12px] categories"
             >
@@ -111,6 +112,13 @@ const Home = () => {
               id="default-search"
               className="block w-full p-4 pl-10 text-sm text-white border-2 border-gray-500 rounded-lg rounded-tl-none rounded-bl-none focus:ring-blue-500 focus:border-blue-600 dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none bg-transparent"
               placeholder="Search Cocktails..."
+              onKeyDown={(e) => {
+                if (e.key == "Enter") {
+                  e.preventDefault();
+                  handledSearch(e, input);
+                  setInput("");
+                }
+              }}
             />
             <button
               onClick={(e) => {
@@ -181,7 +189,7 @@ const Home = () => {
             </button>
           </div>
         )}
-        {allCocktails.length > 0 && <AllCocktails/>}
+        {allCocktails.length > 0 && <AllCocktails />}
       </main>
     </div>
   );
